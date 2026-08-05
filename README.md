@@ -43,12 +43,16 @@ Open https://localhost:8080 in your browser, log in with username admin and the 
 ## 4. Run a Demo Build/Sync Job
 
 ```bash
-kubectl apply -n argocd -f https://githubusercontent.com
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
 ## 5. Deploy an example guestbook app to verify that Argo CD successfully pulls and reconciles states inside your local Kind environment.
 
-Save this as guestbook-app.yaml and run kubectl apply -f guestbook-app.yaml:
+Save this as guestbook-app.yaml and run 
+
+```bash
+kubectl apply -f guestbook-app.yaml
+```
 
 ```bash
 apiVersion: argoproj.io/v1alpha1
@@ -63,7 +67,7 @@ spec:
     targetRevision: HEAD
     path: guestbook
   destination:
-    server: https://default.svc
+    server: https://default.svc](https://kubernetes.default.svc)
     namespace: default
   syncPolicy:
     automated:
