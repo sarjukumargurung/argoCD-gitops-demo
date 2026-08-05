@@ -46,7 +46,7 @@ Open https://localhost:8080 in your browser, log in with username admin and the 
 kubectl apply -n argocd -f https://githubusercontent.com
 ```
 
-## 5. Deploy an example guestbook app via the CLI or UI to verify that Argo CD successfully pulls and reconciles states inside your local Kind environment.
+## 5. Deploy an example guestbook app to verify that Argo CD successfully pulls and reconciles states inside your local Kind environment.
 
 Save this as guestbook-app.yaml and run kubectl apply -f guestbook-app.yaml:
 
