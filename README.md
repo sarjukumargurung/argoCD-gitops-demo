@@ -150,7 +150,9 @@ your-gitops-repo/
         └── kustomization.yaml
 ```
 
-2. Setting Up the BaseThe base directory holds your standard, default configuration
+2. Setting Up the Base
+
+The base directory holds your standard, default configuration
 
 base/kustomization.yaml
 
