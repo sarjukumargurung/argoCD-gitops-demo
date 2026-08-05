@@ -128,7 +128,7 @@ If you look at your Argo CD Web UI dashboard (https://localhost:8080) during eit
 
 ## 8.Want to see how to organize your own repositories using Kustomize overlays (dev/staging/prod)
 
-1. The Directory Structure
+# 1. The Directory Structure
 
 Organize your GitOps repository so that your core files live in base, while environment-specific tweaks live in overlays
 
@@ -150,7 +150,7 @@ your-gitops-repo/
         └── kustomization.yaml
 ```
 
-2. Setting Up the Base
+# 2. Setting Up the Base
 
 The base directory holds your standard, default configuration
 
@@ -164,9 +164,13 @@ resources:
   - service.yaml
 ```
 
-3. Setting Up the Overlays
+# 3. Setting Up the Overlays
 
-Each environment folder inside overlays/ references the base and applies patches or modifiers over it.Dev EnvironmentIn development, we want a single replica and a specialized name prefix (dev-).
+Each environment folder inside overlays/ references the base and applies patches or modifiers over it.
+
+# Dev Environment
+
+In development, we want a single replica and a specialized name prefix (dev-).
 
 overlays/dev/replicas.yaml
 
@@ -191,7 +195,9 @@ patches:
   - path: replicas.yaml
 ```
 
-Prod Environment In production, we need a high-availability setup with 5 replicas and a prod- prefix.
+# Prod Environment 
+
+In production, we need a high-availability setup with 5 replicas and a prod- prefix.
 
 overlays/prod/replicas.yaml
 
@@ -215,7 +221,7 @@ resources:
 patches:
   - path: replicas.yaml
 ```
-4. Linking to Argo CD
+# 4. Linking to Argo CD
  
 Instead of pointing Argo CD directly to individual YAML manifests, point your Argo CD applications to the respective environment directory under overlays/.
 
