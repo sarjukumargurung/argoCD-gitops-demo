@@ -221,7 +221,7 @@ resources:
 patches:
   - path: replicas.yaml
 ```
-# 4. Linking to Argo CD
+## 4. Linking to Argo CD
  
 Instead of pointing Argo CD directly to individual YAML manifests, point your Argo CD applications to the respective environment directory under overlays/.
 
