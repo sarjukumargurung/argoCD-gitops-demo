@@ -73,7 +73,9 @@ spec:
 
 ## 6. Verify and Access the Running App
 
-Once created, Argo CD will immediately pull the deployment manifests, change from OutOfSync to Synced, and show healthy green icons for your resources.To verify the app is running locally on your machine and access it, expose the guestbook service using kubectl
+Once created, Argo CD will immediately pull the deployment manifests, change from OutOfSync to Synced, and show healthy green icons for your resources.
+
+To verify the app is running locally on your machine and access it, expose the guestbook service using kubectl
 
 ```bash
 kubectl port-forward svc/guestbook-ui 8090:80
@@ -83,7 +85,9 @@ Open http://localhost:8090 in your web browser to interact with the running gues
 
 ## 7.Manually deleting a pod or changing a replica count with kubectl to watch Argo CD instantly self-heal it
 
-Simulating a configuration drift is the best way to see Argo CD's self-healing capabilities in action. Because we enabled selfHeal: true in your guestbook configuration, Argo CD will instantly detect any manual tampering and overwrite it to match the Git repository.
+Simulating a configuration drift is the best way to see Argo CD's self-healing capabilities in action. 
+
+Because we enabled selfHeal: true in your guestbook configuration, Argo CD will instantly detect any manual tampering and overwrite it to match the Git repository.
 
 Experiment 1: Changing the Replica Count
 
@@ -114,7 +118,9 @@ Immediately check if the service is gone
 kubectl get svc guestbook-ui
 ```
 
-What happens: The service is still there, or it was recreated so fast that its AGE column reset to just a few seconds.Why: Deleting a service breaks the system configuration. Argo CD spots the missing resource during its quick reconciliation loop and automatically recreates it using the definition stored in the remote Git repo.
+What happens: The service is still there, or it was recreated so fast that its AGE column reset to just a few seconds.
+
+Why: Deleting a service breaks the system configuration. Argo CD spots the missing resource during its quick reconciliation loop and automatically recreates it using the definition stored in the remote Git repo.
 
 If you look at your Argo CD Web UI dashboard (https://localhost:8080) during either of these events, you will briefly see the application status icon flash to a yellow OutOfSync state before instantly snapping back to a healthy green Synced state.
 
