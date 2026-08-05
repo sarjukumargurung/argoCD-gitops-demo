@@ -128,7 +128,9 @@ If you look at your Argo CD Web UI dashboard (https://localhost:8080) during eit
 
 ## 8.Want to see how to organize your own repositories using Kustomize overlays (dev/staging/prod)
 
-1. The Directory StructureOrganize your GitOps repository so that your core files live in base, while environment-specific tweaks live in overlays
+1. The Directory Structure
+
+Organize your GitOps repository so that your core files live in base, while environment-specific tweaks live in overlays
 
 ```bash
 your-gitops-repo/
