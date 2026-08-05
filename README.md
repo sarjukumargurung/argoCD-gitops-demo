@@ -105,7 +105,9 @@ What happens: In your first terminal, you will see new pods briefly try to spin 
 
 Why: Argo CD detects that the live cluster state (5 replicas) does not match the desired Git state (1 replica). It instantly issues a corrective command to scale it right back down to 1.
 
-Experiment 2: Deleting a Kubernetes ServiceKubernetes itself self-heals pods if they die, but it will not automatically recreate a deleted Service, ConfigMap, or Deployment. Argo CD will.
+Experiment 2: Deleting a Kubernetes Service
+
+Kubernetes itself self-heals pods if they die, but it will not automatically recreate a deleted Service, ConfigMap, or Deployment. Argo CD will.
 
 Delete the application's network service entirely
 
