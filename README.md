@@ -122,6 +122,7 @@ If you look at your Argo CD Web UI dashboard (https://localhost:8080) during eit
 
 1. The Directory StructureOrganize your GitOps repository so that your core files live in base, while environment-specific tweaks live in overlays
 
+```bash
 your-gitops-repo/
 ├── base/
 │   ├── deployment.yaml
@@ -137,6 +138,7 @@ your-gitops-repo/
     └── prod/
         ├── replicas.yaml
         └── kustomization.yaml
+```
 
 2. Setting Up the BaseThe base directory holds your standard, default configuration
 
