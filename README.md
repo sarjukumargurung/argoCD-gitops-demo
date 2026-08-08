@@ -1,6 +1,6 @@
 # argoCD-gitops-demo
 
-## Demo
+## Demo - Using Argo CD with Kubernetes provides an incredibly powerful, native GitOps continuous delivery workflow
 
 <img width="1430" height="717" alt="image" src="https://github.com/user-attachments/assets/99bb1d3a-30e5-4db4-9b3d-688ae7c36adb" />
 
